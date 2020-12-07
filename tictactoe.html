@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: rgb(248, 248, 248);
+        }
+        table{
+            margin-left: 500px;
+            margin-top: 200px;
+        }
+        .clicker {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 30px;
+            margin-right: 30px;
+            background-color: rgb(235, 235, 235);
+            border: solid 6px  rgb(235, 235, 235);
+            box-shadow: 50px black;
+            color:  rgb(31, 31, 31);
+            font-weight: 700;
+            outline: none;
+        }
+
+        .clicker:hover {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 30px;
+            margin-right: 30px;
+            background-color: rgb(248, 248, 248);
+            border: solid 6px rgba(0, 140, 255, 0.164);
+            font-weight: 700;
+            box-shadow: 10px rgb(0, 140, 255);
+            transition: ease-in-out 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="hidden" value="one" id="playerid">
+    <table>
+        <tr>
+            <td> <button id="Button1" onclick="change(event)" class="clicker"></button> </td>
+            <td> <button id="Button2" onclick="change(event)" class="clicker"></button> </td>
+            <td> <button id="Button3" onclick="change(event)" class="clicker"></button> </td>
+        </tr>
+        <tr>
+            <td> <button id="Button4" onclick="change(event)" class="clicker"></button> </td>
+            <td> <button id="Button5" onclick="change(event)" class="clicker"></button> </td>
+            <td> <button id="Button6" onclick="change(event)" class="clicker"></button> </td>
+        </tr>
+        <tr>
+            <td> <button id="Button7" onclick="change(event)" class="clicker"></button> </td>
+            <td> <button id="Button8" onclick="change(event)" class="clicker"></button> </td>
+            <td> <button id="Button9" onclick="change(event)" class="clicker"></button> </td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+
+        const change = (e) => {
+            if (playerid.value == 'one') {
+                e.target.innerHTML = "X"
+                playerid.value = 'two'
+            } else if (playerid.value == 'two') {
+                e.target.innerHTML = "O"
+                playerid.value = 'one'
+            }
+            e.target.disabled = true;
+
+            const win = () => {
+                if ((Button1.innerHTML && Button2.innerHTML && Button3.innerHTML) != '') {
+                    if (Button1.innerHTML == 'X') {
+                        if (Button2.innerHTML == 'X') {
+                            if (Button3.innerHTML == 'X') {
+                                console.log('Player one wins')
+                            }
+                        }
+
+                    }
+                    else if (Button1.innerHTML == 'O') {
+                        if (Button2.innerHTML == 'O') {
+                            if (Button3.innerHTML == 'O') {
+                                console.log('Player two wins')
+                            }
+                        }
+
+                    }
+                }
+                else if ((Button4.innerHTML && Button5.innerHTML && Button6.innerHTML) != '') {
+                    if (Button4.innerHTML == 'X') {
+                        if (Button5.innerHTML == 'X') {
+                            if (Button6.innerHTML == 'X') {
+                                console.log('Player one wins')
+                            }
+                        }
+
+                    }
+                    else if (Button4.innerHTML == 'O') {
+                        if (Button5.innerHTML == 'O') {
+                            if (Button6.innerHTML == 'O') {
+                                console.log('Player two wins')
+                            }
+                        }
+
+                    }
+                }
+                else if ((Button7.innerHTML && Button8.innerHTML && Button9.innerHTML) != '') {
+                    if (Button7.innerHTML == 'X') {
+                        if (Button8.innerHTML == 'X') {
+                            if (Button9.innerHTML == 'X') {
+                                console.log('Player one wins')
+                            }
+                        }
+
+                    }
+                    else if (Button7.innerHTML == 'O') {
+                        if (Button8.innerHTML == 'O') {
+                            if (Button9.innerHTML == 'O') {
+                                console.log('Player two wins')
+                            }
+                        }
+
+                    }
+                }
+                else if ((Button1.innerHTML && Button4.innerHTML && Button7.innerHTML) != '') {
+                    if (Button1.innerHTML == 'X') {
+                        if (Button4.innerHTML == 'X') {
+                            if (Button7.innerHTML == 'X') {
+                                console.log('Player one wins')
+                            }
+                        }
+
+                    }
+                    else if (Button1.innerHTML == 'O') {
+                        if (Button4.innerHTML == 'O') {
+                            if (Button7.innerHTML == 'O') {
+                                console.log('Player two wins')
+                            }
+                        }
+
+                    }
+                }
+                else if ((Button2.innerHTML && Button5.innerHTML && Button8.innerHTML) != '') {
+                    if (Button2.innerHTML == 'X') {
+                        if (Button5.innerHTML == 'X') {
+                            if (Button8.innerHTML == 'X') {
+                                console.log('Player one wins')
+                            }
+                        }
+
+                    }
+                    else if (Button2.innerHTML == 'O') {
+                        if (Button5.innerHTML == 'O') {
+                            if (Button8.innerHTML == 'O') {
+                                console.log('Player two wins')
+                            }
+                        }
+
+                    }
+                }
+                else if ((Button3.innerHTML && Button6.innerHTML && Button9.innerHTML) != '') {
+                    if (Button3.innerHTML == 'X') {
+                        if (Button6.innerHTML == 'X') {
+                            if (Button9.innerHTML == 'X') {
+                                console.log('Player one wins')
+                            }
+                        }
+
+                    }
+                    else if (Button3.innerHTML == 'O') {
+                        if (Button6.innerHTML == 'O') {
+                            if (Button9.innerHTML == 'O') {
+                                console.log('Player two wins')
+                            }
+                        }
+
+                    }
+                }
+                else if ((Button1.innerHTML && Button5.innerHTML && Button9.innerHTML) != '') {
+                    if (Button1.innerHTML == 'X') {
+                        if (Button5.innerHTML == 'X') {
+                            if (Button9.innerHTML == 'X') {
+                                console.log('Player one wins')
+                            }
+                        }
+
+                    }
+                    else if (Button1.innerHTML == 'O') {
+                        if (Button5.innerHTML == 'O') {
+                            if (Button9.innerHTML == 'O') {
+                                console.log('Player two wins')
+                            }
+                        }
+
+                    }
+                }
+                else if ((Button3.innerHTML && Button5.innerHTML && Button7.innerHTML) != '') {
+                    if (Button3.innerHTML == 'X') {
+                        if (Button5.innerHTML == 'X') {
+                            if (Button7.innerHTML == 'X') {
+                                console.log('Player one wins')
+                            }
+                        }
+
+                    }
+                    else if (Button3.innerHTML == 'O') {
+                        if (Button5.innerHTML == 'O') {
+                            if (Button7.innerHTML == 'O') {
+                                console.log('Player two wins')
+                            }
+                        }
+
+                    }
+                }
+            }
+            win();
+        }
+
+    </script>
+</body>
+
+</html>
